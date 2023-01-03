@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "73ad00d4-746c-484c-b1bc-ef78aa0a0348",
+		"name": "mux-gorm-crud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17977350"
+	},
+	"item": [
+		{
+			"name": "GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "base/place",
+					"host": [
+						"base"
+					],
+					"path": [
+						"place"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base}}/place/1",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"place",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base}}/place/1",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"place",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"酒泉公园\",\n  \"star\": 2\n}"
+				},
+				"url": {
+					"raw": "{{base}}/place",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"place"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CREATE",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"嘉峪关\",\n  \"star\": 4\n}"
+						},
+						"url": {
+							"raw": "{{base}}/place",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"place"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "CREATE",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"酒泉公园\",\n  \"star\": 2\n}"
+						},
+						"url": {
+							"raw": "{{base}}/place",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"place"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base",
+			"value": "http://localhost:8080"
+		}
+	]
+}
