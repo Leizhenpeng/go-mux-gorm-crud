@@ -18,6 +18,21 @@ func GetAllPlaces(w http.ResponseWriter, r *http.Request) {
 	}
 	respondWithJSON(w, http.StatusOK, places)
 }
+func GetPlacesById(w http.ResponseWriter, r *http.Request) {
+	vars := mux.Vars(r)
+	id := vars["id"]
+	idInt, err := strconv.Atoi(id)
+	if err != nil {
+		respondWithJSON(w, http.StatusBadRequest, err)
+		return
+	}
+	place, err := model.GetPlaceByID(idInt)
+	if err != nil {
+		respondWithJSON(w, http.StatusInternalServerError, err)
+		return
+	}
+	respondWithJSON(w, http.StatusOK, place)
+}
 
 func CreatePlace(w http.ResponseWriter, r *http.Request) {
 	newPlace := model.Place{}

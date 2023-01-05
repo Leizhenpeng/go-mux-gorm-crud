@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "73ad00d4-746c-484c-b1bc-ef78aa0a0348",
+		"_postman_id": "2e26f317-cd5f-489c-ba29-fed3289be217",
 		"name": "mux-gorm-crud",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "17977350"
@@ -12,12 +12,30 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "base/place",
+					"raw": "{{base}}/places",
 					"host": [
-						"base"
+						"{{base}}"
 					],
 					"path": [
-						"place"
+						"places"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ONE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base}}/place/3",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"place",
+						"3"
 					]
 				}
 			},
@@ -98,10 +116,10 @@
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
-					"body": null
+					"body": ""
 				},
 				{
 					"name": "CREATE",
@@ -122,10 +140,10 @@
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
-					"body": null
+					"body": ""
 				}
 			]
 		}
