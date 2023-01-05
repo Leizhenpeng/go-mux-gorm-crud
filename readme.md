@@ -8,6 +8,12 @@
 - 熟练之后可以玩[ent](https://entgo.io/docs/getting-started/)
 
 
+## mysql 
+1. 进入`deploy/.env`目录， 修改数据库配置
+2. 启动数据库`docker-compose up -d`
+3. 停止数据库`docker-compose stop`
+4. 删除数据库`docker-compose down`
+
 
 ## 规范
 ### 1. 项目结构
